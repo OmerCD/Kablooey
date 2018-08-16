@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - "K\xFCp"
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - "Yaz\u0131"
+  - Kutu Parlak
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Kutu
+    uniqueID: 3992083731
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: "\xD6ne \xC7\u0131kacak Yaz\u0131lar"
+    uniqueID: 3798663353
+    locked: 0
