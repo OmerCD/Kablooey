@@ -248,8 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433bad5cc920e9f46bd0f604f6789752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "a\xE7\u0131k": {fileID: 21300000, guid: 09b0ad7ed4d35bd40b0546f9b1987f0e, type: 3}
-  "kapal\u0131": {fileID: 21300000, guid: 30c5063ab5c1aca4e9121bb1be223b59, type: 3}
+  mute: {fileID: 21300000, guid: 6ed1dc1b8e5ef034eb247ff9142b937e, type: 3}
+  muteHover: {fileID: 21300000, guid: 52636716dbaecc44f9549794688b4087, type: 3}
+  mutePressed: {fileID: 21300000, guid: bc9ceca31d0921546bd2bff90c4bea25, type: 3}
+  unmute: {fileID: 21300000, guid: 1d52438cd901749459eca9f8fdc0f127, type: 3}
+  unmuteHover: {fileID: 21300000, guid: 67ed9bc43d49a334d83494c3a0b97230, type: 3}
+  unmutePressed: {fileID: 21300000, guid: 8b1fbe2f35617d141a1b8bcd1ad09f57, type: 3}
   "m\xFCzikObjesi": {fileID: 168970, guid: e9fade49d0ccd0a4b86838a0d739552a, type: 2}
 --- !u!1 &86121724
 GameObject:
@@ -340,7 +344,7 @@ GameObject:
   - component: {fileID: 246478209}
   - component: {fileID: 246478210}
   m_Layer: 0
-  m_Name: text
+  m_Name: IconText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,11 +526,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bccdd9cf75f1e46a18792ebf55750151, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
+    m_FontSize: 32
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 2
     m_MaxSize: 105
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -1993,8 +1997,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bccdd9cf75f1e46a18792ebf55750151, type: 3}
-    m_FontSize: 96
+    m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
+    m_FontSize: 72
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0

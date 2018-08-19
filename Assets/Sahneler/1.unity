@@ -144,10 +144,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 24
+  m_FontSize: 48
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278248191
@@ -166,7 +166,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  - {fileID: 2100000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -681,8 +681,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -949,10 +949,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 24
+  m_FontSize: 48
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278248191
@@ -971,7 +971,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  - {fileID: 2100000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1614,10 +1614,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 48
+  m_FontSize: 64
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  m_Font: {fileID: 12800000, guid: 3a359766724ef3e41a64834a77b62a6e, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278255390
@@ -1636,7 +1636,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  - {fileID: 2100000, guid: 3a359766724ef3e41a64834a77b62a6e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1811,10 +1811,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 24
+  m_FontSize: 48
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278248191
@@ -1833,7 +1833,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  - {fileID: 2100000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2160,8 +2160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433bad5cc920e9f46bd0f604f6789752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "a\xE7\u0131k": {fileID: 21300000, guid: 09b0ad7ed4d35bd40b0546f9b1987f0e, type: 3}
-  "kapal\u0131": {fileID: 21300000, guid: 30c5063ab5c1aca4e9121bb1be223b59, type: 3}
+  mute: {fileID: 0}
+  muteHover: {fileID: 0}
+  mutePressed: {fileID: 0}
+  unmute: {fileID: 0}
+  unmuteHover: {fileID: 0}
+  unmutePressed: {fileID: 0}
   "m\xFCzikObjesi": {fileID: 168970, guid: e9fade49d0ccd0a4b86838a0d739552a, type: 2}
 --- !u!114 &994497158
 MonoBehaviour:
@@ -2626,10 +2630,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 32
+  m_FontSize: 48
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278248191
@@ -2648,7 +2652,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+  - {fileID: 2100000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3496,8 +3500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433bad5cc920e9f46bd0f604f6789752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "a\xE7\u0131k": {fileID: 21300000, guid: 09b0ad7ed4d35bd40b0546f9b1987f0e, type: 3}
-  "kapal\u0131": {fileID: 21300000, guid: 30c5063ab5c1aca4e9121bb1be223b59, type: 3}
+  mute: {fileID: 0}
+  muteHover: {fileID: 0}
+  mutePressed: {fileID: 0}
+  unmute: {fileID: 0}
+  unmuteHover: {fileID: 0}
+  unmutePressed: {fileID: 0}
   "m\xFCzikObjesi": {fileID: 168970, guid: e9fade49d0ccd0a4b86838a0d739552a, type: 2}
 --- !u!114 &1883943556
 MonoBehaviour:
@@ -3840,7 +3848,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: de2beaaf324501e4f8583ce6aa721df2, type: 3}
+    m_Font: {fileID: 12800000, guid: d2861e98c91f41c4aa05d069b89c0fc7, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 1
