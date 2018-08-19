@@ -22,7 +22,7 @@ public class Can : MonoBehaviour
         }
         else
         {
-            süreYazı.text = "Filled";
+            süreYazı.text = "";
         }
         cansayisi = PlayerPrefs.GetInt("Can Sayısı");
         canYazı.text = cansayisi.ToString();
@@ -93,7 +93,6 @@ public class Can : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Süre", süresayisi);
-            süreYazı.text = "Filled";
         }
     }
     void Cevirici(int gecici)
