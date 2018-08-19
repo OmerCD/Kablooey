@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System;
 using System.Linq;
+using UnityEngine.UI;
 
 public class KutuKontrol : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class KutuKontrol : MonoBehaviour
     [SerializeField] private Sprite _boxBlack;
     [SerializeField] private Sprite _boxTimed;
     [Space(15)]
+
+    [Header("UI Elementleri")]
+    public Text artiSure;
+    public Text highScore;
+    public Text score;
+
+
     [Header("Kutu Ayarları")]
     [Range(1, 10)]
     public int Genişlik = 6;
@@ -106,7 +114,7 @@ public class KutuKontrol : MonoBehaviour
     {
         YüksekSkorKontrolü();
         PuanÇoklayıcı = puanÇoklayıcı;
-        GameObject.Find("Artı Süre").GetComponent<TextMesh>().text = "";
+        artiSure.text = "";
     }
     public static Kutu KutuVarmı(float x, float y)
     {
@@ -200,8 +208,8 @@ public class KutuKontrol : MonoBehaviour
             {
                 PlayerPrefs.SetInt("High Score", puan);
             }
-            GameObject.Find("highscore").GetComponent<UnityEngine.UI.Text>().text = "High Score: " + PlayerPrefs.GetInt("High Score").ToString();
-            GameObject.Find("score").GetComponent<UnityEngine.UI.Text>().text = "Score: " + GameObject.Find("Skor").GetComponent<TextMesh>().text;
+            highScore.text = "High Score: " + PlayerPrefs.GetInt("High Score").ToString();
+            score.text = "Score: " + GameObject.Find("Skor").GetComponent<TextMesh>().text;
             GameObject.Find("Ara Menü").GetComponent<Canvas>().enabled = true;
             AraMenüFonksiyonları.oyunDurdu = AraMenüFonksiyonları.oyunBitti = true;
         }
@@ -384,9 +392,8 @@ public class KutuKontrol : MonoBehaviour
     }
     void YüksekSkorKontrolü()
     {
-        TextMesh yazılacakAlan = GameObject.Find("Yüksek Skor").GetComponent<TextMesh>();
         int geçmişYüksekSkor = PlayerPrefs.GetInt("High Score");
-        yazılacakAlan.text = geçmişYüksekSkor > puan ? geçmişYüksekSkor.ToString() : puan.ToString();
+        highScore.text = geçmişYüksekSkor > puan ? geçmişYüksekSkor.ToString() : puan.ToString();
     }
     private void SesOynat(string ObjeAdı)
     {
@@ -435,10 +442,12 @@ public class KutuKontrol : MonoBehaviour
 
     public static float Puanla(List<Kutu> patlayanlar)
     {
+        Text score = GameObject.Find("ScoreText").GetComponent<Text>();
+        Text plusTime = GameObject.Find("PlusTime").GetComponent<Text>();
         if (patlayanlar.Count < 3)
         {
-            GameObject.Find("Skor").GetComponent<TextMesh>().text = Convert.ToString(Convert.ToInt32(GameObject.Find("Skor").GetComponent<TextMesh>().text) - puanEksiltme);
-            GameObject.Find("Artı Süre").GetComponent<TextMesh>().text = "-" + (puanEksiltme / 100f).ToString("0.00");
+            score.text = Convert.ToString(Convert.ToInt32(score.text) - puanEksiltme);
+            plusTime.text = "-" + (puanEksiltme / 100f).ToString("0.00");
             Süre.KalanSüre = Süre.KalanSüre - puanEksiltme / 100f;
             artıSüreyiGöster = true;
             return puanEksiltme;
@@ -448,7 +457,7 @@ public class KutuKontrol : MonoBehaviour
         puan = patlayanlar.Count * çoklayıcı;
         BaşarımKontrol.KutuSayısıPatlamaKontrol(patlayanlar.Count);
         puan *= PuanÇoklayıcı;
-        GameObject.Find("Skor").GetComponent<TextMesh>().text = Convert.ToString((int)puan + Convert.ToInt32(GameObject.Find("Skor").GetComponent<TextMesh>().text));
+        score.text = Convert.ToString((int)puan + Convert.ToInt32(score.text));
         float süre = puan * 0.01f;
         foreach (Kutu item in patlayanlar)
         {
@@ -457,7 +466,7 @@ public class KutuKontrol : MonoBehaviour
                 süre++; //Her süreli kutu için 1 saniye ekleme
             }
         }
-        GameObject.Find("Artı Süre").GetComponent<TextMesh>().text = "+" + süre.ToString("0.00");
+        plusTime.text = "+" + süre.ToString("0.00");
         artıSüreyiGöster = true;
         Süre.KalanSüre += süre;
 
@@ -584,7 +593,7 @@ public class KutuKontrol : MonoBehaviour
             artSüreSil -= Time.deltaTime;
             if (artSüreSil <= 0)
             {
-                GameObject.Find("Artı Süre").GetComponent<TextMesh>().text = "";
+                artiSure.text= "";
                 artSüreSil = artSüreSilmeZamanı;
                 artıSüreyiGöster = false;
             }
