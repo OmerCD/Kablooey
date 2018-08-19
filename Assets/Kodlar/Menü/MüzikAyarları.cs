@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class MüzikAyarları : MonoBehaviour
 {
-    public Sprite açık, kapalı;
+    public Sprite mute, muteHover, mutePressed, unmute, unmuteHover, unmutePressed;
     AudioSource ses;
-    Button b;
+    Button btn;
     public GameObject müzikObjesi;
     GameObject müzik;
 
@@ -27,18 +27,18 @@ public class MüzikAyarları : MonoBehaviour
         ses = müzik.GetComponent<AudioSource>();
 
         DontDestroyOnLoad(müzik);
-        b = GetComponent<Button>();
+        btn = GetComponent<Button>();
         try
         {
             if (PlayerPrefs.GetInt("Ses") == 0)
             {
                 ses.mute = true;
-                b.image.sprite = kapalı;
+                SpriteChange(btn, false);
             }
             else
             {
                 ses.mute = false;
-                b.image.sprite = açık;
+                SpriteChange(btn, true);
             }
         }
         catch
@@ -49,19 +49,38 @@ public class MüzikAyarları : MonoBehaviour
     public void MüzikAyarla()
     {
         ses = müzik.GetComponent<AudioSource>();
-        b = GetComponent<Button>();
+        btn = GetComponent<Button>();
         if (ses.mute)
         {
             ses.mute = false;
-            b.image.sprite = açık;
+            SpriteChange(btn, true);
             PlayerPrefs.SetInt("Ses", 1);
 
         }
         else
         {
             ses.mute = true;
-            b.image.sprite = kapalı;
+            SpriteChange(btn, false);
             PlayerPrefs.SetInt("Ses", 0);
         }
+    }
+
+    private void SpriteChange(Button btn, bool state)
+    {
+        SpriteState spriteState = new SpriteState();
+        spriteState = btn.spriteState;
+        if (state)
+        {
+            btn.GetComponent<Image>().sprite = unmute;
+            spriteState.highlightedSprite = unmuteHover;
+            spriteState.pressedSprite = unmutePressed;
+        }
+        else
+        {
+            btn.GetComponent<Image>().sprite = mute;
+            spriteState.highlightedSprite = muteHover;
+            spriteState.pressedSprite = mutePressed;
+        }
+        btn.spriteState = spriteState;
     }
 }
