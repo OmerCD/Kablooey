@@ -13,7 +13,7 @@ public class GeriSayımKontrölü : MonoBehaviour {
         arkaplanResmi = transform.GetComponentInParent<Image>();
         yazıAlanı = GetComponent<Text>();
         AraMenüFonksiyonları.oyunDurdu = true;
-        araMenü = GameObject.Find("Ara Menü").GetComponent<Canvas>();
+        araMenü = GameObject.Find("MenuCanvas").GetComponent<Canvas>();
         hız = 0.025f;
     }
 	

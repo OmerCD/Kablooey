@@ -5,10 +5,13 @@ using UnityEngine.UI;
 using System;
 
 public class AraMenüFonksiyonları : MonoBehaviour {
+    public Text highScore;
+    public Text menuScore;
+    public Text score;
+    public Text coin;
     public static bool oyunDurdu = false;
     public static bool oyunBitti = false;
     public static bool geriSayım = false;
-    public Text tx;
     void Awake()
     {
         oyunDurdu = oyunBitti = false;
@@ -25,8 +28,8 @@ public class AraMenüFonksiyonları : MonoBehaviour {
                 AraMenü.enabled = false;
             }
             else {
-                GameObject.Find("highscore").GetComponent<Text>().text = "High Score: " + PlayerPrefs.GetInt("High Score").ToString();
-                GameObject.Find("score").GetComponent<Text>().text = "Score: " + GameObject.Find("Skor").GetComponent<TextMesh>().text;
+                highScore.text = PlayerPrefs.GetInt("High Score").ToString();
+                menuScore.text = score.text;
                 AraMenü.enabled = true;
                 oyunDurdu = true;
             }
@@ -49,7 +52,7 @@ public class AraMenüFonksiyonları : MonoBehaviour {
         int can = PlayerPrefs.GetInt("Can Sayısı");       
         if (can!=0)
         {
-            tx.text = Convert.ToString(can - 1);
+            coin.text = Convert.ToString(can - 1);
             PlayerPrefs.SetInt("Can Sayısı", can - 1);
             SceneManager.LoadScene("1");
         }

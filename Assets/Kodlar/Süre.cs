@@ -50,7 +50,7 @@ public class Süre : MonoBehaviour {
         }
         if (süresayisi <= 0f)
         {
-            skor = int.Parse(GameObject.Find("Skor").GetComponent<TextMesh>().text);
+            skor = Convert.ToInt32(GameObject.Find("ScoreText").GetComponent<Text>().text);
             GameObject.Find("LoadingBar").GetComponent<Image>().fillAmount = 0;
             yüksekskor = PlayerPrefs.GetInt("High Score");
             BaşarımKontrol.YeniYüksekSkor(skor);
@@ -58,9 +58,9 @@ public class Süre : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("High Score", skor);
             }
-            GameObject.Find("highscore").GetComponent<Text>().text = "High Score: " + PlayerPrefs.GetInt("High Score").ToString();
-            GameObject.Find("score").GetComponent<Text>().text = "Score: " + skor.ToString();
-            GameObject.Find("Ara Menü").GetComponent<Canvas>().enabled = true;
+            GameObject.Find("HighScoreText").GetComponent<Text>().text = PlayerPrefs.GetInt("High Score").ToString();
+            GameObject.Find("ScoreText").GetComponent<Text>().text = skor.ToString();
+            GameObject.Find("MenuCanvas").GetComponent<Canvas>().enabled = true;
             AraMenüFonksiyonları.oyunDurdu = AraMenüFonksiyonları.oyunBitti= true;
             if (KutuKontrol.toplamPuan < 0)
             {
